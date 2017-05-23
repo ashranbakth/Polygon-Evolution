@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>EECS 492 A1 Results</title>
+</head>
+<body>
+<p>
+EECS 492 A1 Results<br>
+Ashran Bakth<br>
+October 2, 2015<br>
+</p>
+<h2>A1 Results</h2>
+<p>
+The purpose of this project is to recreate
+<a href="http://rogeralsing.com/2008/12/07/genetic-programming-evolution-of-mona-lisa/">Roger
+Alsing's work on genetic programming to create art</a>.
+The population consists of approximations to a given image.
+Each image uses P polygons, where P=100 for the results on this page.
+N is the population size and K is the number of new children created per generation.
+T is the number of generations displayed in each animation.
+The fitness of the image is a measure of how closely it matches the original image.
+The learning curve shows how the fitness of the best approximation improves over time.
+The 3D graphs depict how the fitness after 25000 generations varies with N and K.
+</p>
+<table border=1>
+<tr>
+<th>Original image</th>
+<th>Approximation</th>
+<th>Learning curve</th>
+</tr>
+<tr>
+<td>96&times;96 pixels<br><img src="im_darwin.jpg"></td>
+<td>P=100, N=1, K=2, E=50,000<br><img src="im_darwin.gif"></td>
+<td><img src="darwingraph.JPG"></td>
+<td><img width=400 height=400 src="im_darwin3d.svg"><br>N=4, K=2 gave the best result<td>
+</tr>
+<tr>
+<td>100&times;100 pixels<br><img src="im_mona.jpg"></td>
+<td>P=100, N=1, K=2, E=50,000<br><img src="im_lisa.gif"></td>
+<td><img src="monalisa.jpg"></td>
+<td><img width=400 height=400 src="images3d.svg"><br>N=4, K=1 gave the best result<td>
+</tr>
+<tr>
+<td>100&times;100 pixels<br><img src="michigan.jpg"></td>
+<td>P=100, N=1, K=2, E=50,000<br><img src="michigan.gif"></td>
+<td><img src="michigangraph.jpg"></td>
+<td><img width=400 height=400 src="scream3d.svg"><br>N=2, K=1 gave the best result</td>
+</tr>
+<tr>
+<td>220&times;220 pixels<br><img src="nike.jpg"></td>
+<td>P=100, N=1, K=2, E=50,000<br><img src="nike.gif"></td>
+<td><img src="nikegraph.jpg"></td>
+<td><img width=400 height=400 src="mona-lisa3d.svg"><br>N=1, K=2 gave the best result</td>
+</tr>
+<tr>
+<td>256&times;256 pixels<br><img src="twitter.jpg"></td>
+<td>P=100, N=1, K=2, E=50,000<br><img src="twitter.gif"></td>
+<td><img src="twittergraph.jpg"></td>
+<td><img width=400 height=400 src="darwin3d.svg"><br>N=2, K=1 gave the best result</td>
+</tr>
+<tr>
+<td>236&times;236 pixels<br><img src="art.jpg"></td>
+<td>P=100, N=1, K=2, E=50,000<br><img src="art.gif"></td>
+<td><img src="whatsapp.jpg"></td>
+<td><img width=400 height=400 src="ai3d.svg"><br>N=2, K=1 gave the best result</td>
+</tr>
+</table>
+
+<p>
+Mutations used:
+<ul>
+<li>With 1/4 probability, swap the order of two polygons which are in adjacent depth layers.</li>
+<ul>
+<li>With 1/4 probability, alter the color slightly.</li>
+<li>With 1/4 probability, alter the opacity of the polygon
+<ul>
+<li>With 1/4, move a vertex slightly.</li>
+<li>I have used only 4 mutations, swapping polygons, altering color, altering opacity, and the movement of the vertices
+</ul></li>
+</ul></li>
+</ul>
+Coordinates of vertices were moved randomly using a uniform int distribution. 
+</p>
+<p>
+Random colors were picked using uniform distribution over the RGB color space.
+</p>
+<p>
+Parents were picked randomly by using a uniform distribution. 
+</p>
+</body>
+</html>
