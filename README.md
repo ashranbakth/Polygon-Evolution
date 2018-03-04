@@ -1,2 +1,2 @@
 # Polygon-Evolution
-Implemented a program in which polygons evolve every generation and only the fit polygons survive every generation.
+Implemented a genetic algorithm with polygons. Every generation if the fitness level increased the polygons will continue to the next generation until fitness level is close to perfect. 
